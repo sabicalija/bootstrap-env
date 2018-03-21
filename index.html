@@ -7,27 +7,312 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+        <link href="https://font.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        
-        <title>Title</title>
+        <title>Neighborhood</title>
     </head>
     
     <body>
         
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Title</h1>
-                    <p>This is where we start out project!</p>
-                </div><!-- .col-md-12 -->
-            </div><!-- .row -->
-        </div><!-- .container -->
+        <nav class="navbar navbar-collapse-xs navbar-expand-md fixed-top">
+            
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fas fa-map-marker-alt"></i> Neighborhood</a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#main-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Browse
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Hospitals</a>
+                                <a class="dropdown-item" href="#">Finance</a>
+                                <a class="dropdown-item" href="#">Shopping</a>
+                                <a class="dropdown-item" href="#">Food</a>
+                                <a class="dropdown-item" href="#">Nightlife</a>
+                                <a class="dropdown-item" href="#">Hotels</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Submit your brand</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#account-modal" data-case="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#account-modal" data-case="register">Register</a>
+                        </li>
+                    </ul>
+                </div><!-- .collapse -->
+            </div><!-- .container -->
+        </nav><!-- .navbar -->
+
+        <div class="home-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content-box">
+                            <h2>Explore your neighborhood</h2>
+                            <form method="GET" action="#">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="What do you want to discover today?">
+                                    <input type="submit" class="btn btn-green" value="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- .col-md-12 -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .home-hero -->
+
+        <div class="place-list">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-9 order-md-2 order-sm-1">                        
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/351" alt="Place 1">
+                                    <div class="card-block">
+                                        <h4 class="card-title">Title 1</h4>
+                                        <p class="card-text">This is some stupid text just to fill some previously empty space.</p>
+                                        <a href="place.html" class="btn btn-primary" data-toggle="popover" title="Did you know?" data-content="And here's some amazing content. It's very engaging. Right?" data-trigger="focus">
+                                            More about Title <i class="fa fa-angle-double-right"></i>
+                                        </a>
+                                    </div><!-- .card-black -->
+                                </div><!-- .card -->
+                            </div><!-- .col-md-4 -->
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/252" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">PacktPub</h4>
+                                        <p class="card-text">Packt Publishing is the leading 
+                                            <span data-toggle="tooltip" data-placement="top" data-html="true" title="2nd <b>Floor</b> Liverly Place, 35 Liverly Street, Colmore Business District, Birmingham B3 2PB, United Kingdom">
+                                                UK
+                                            </span> provider of Technology eBooks,
+                                            Coding eBooks, Videos and Blogs; helping IT professionals to put software to work.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">More about Packt <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+                        
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/253" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">Zara</h4>
+                                        <p class="card-text">Zara is a <span href="#" class="specific-tip" title="test title">Spanish</span> clothing and accessories retailer based in Arteixo, Galicia.</p>
+                                        <a href="#" class="btn btn-primary dynamic-popover" data-bind"#popover-1">More about Zara <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/254" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">McDonald's</h4>
+                                        <p class="card-text">This is another text, at least just as stupid as the previous one, for the same purpose.</p>
+                                        <a href="#" class="btn btn-primary">More about Zara <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/255" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">1 OAK Nightclub</h4>
+                                        <p class="card-text">This is another text, at least just as stupid as the previous one, for the same purpose.</p>
+                                        <a href="#" class="btn btn-primary">More about 1 OAK Nightclub <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/256" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">Best Buy</h4>
+                                        <p class="card-text">This is another text, at least just as stupid as the previous one, for the same purpose.</p>
+                                        <a href="#" class="btn btn-primary">More about Best Buy <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/257" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">McDonald's</h4>
+                                        <p class="card-text">This is another text, at least just as stupid as the previous one, for the same purpose.</p>
+                                        <a href="#" class="btn btn-primary">More about Zara <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/258" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">1 OAK Nightclub</h4>
+                                        <p class="card-text">This is another text, at least just as stupid as the previous one, for the same purpose.</p>
+                                        <a href="#" class="btn btn-primary">More about 1 OAK Nightclub <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://unsplash.it/350/259" alt="Place 2">
+                                    <div class="card-block">
+                                        <h4 class="card-title">Best Buy</h4>
+                                        <p class="card-text">This is another text, at least just as stupid as the previous one, for the same purpose.</p>
+                                        <a href="#" class="btn btn-primary">More about Best Buy <i class="fa fa-angle-double-right"></i></a>
+                                    </div><!-- .card-block -->
+                                </div><!-- .col -->
+                            </div><!-- .col-md-4 -->
+
+                        </div><!-- .row -->
+                    </div><!-- .col-md-9 -->
+
+                    <div class="col-md-3 order-md-1 order-sm-2">
+                        <ul class="list-group">
+                            <a href="#" class="list-group-item active">All categories</a>
+                            <a href="#" class="list-group-item list-group-item-action">Hospitals</a>
+                            <a href="#" class="list-group-item list-group-item-action">Finance</a>
+                            <a href="#" class="list-group-item list-group-item-action">Shopping</a>
+                            <a href="#" class="list-group-item list-group-item-action">Nightlife</a>
+                            <a href="#" class="list-group-item list-group-item-action">Hotels</a>
+                        </ul>
+                        
+                    </div><!-- .col-md-3 -->
+                </div><!-- .row -->
+            </div><!-- .place-list -->
+
+            <div class="modal fade" id="test-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button class="close" type="button" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div><!-- .modal-header -->
+                        <div class="modal-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing aria-hidden typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                                Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injecting humour and the like).
+                            </p>
+                        </div><!-- .modal-body -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div><!-- .modal-footer -->
+                    </div><!-- .modal-content -->
+                </div><!-- .modal-dialog -->
+            </div><!-- .modal -->
         
+        </div>
+
+        <div class="modal fade" id="account-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <a href="#" class="close-modal" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <div class="modal-body">
+                        <div class="form-box">
+                            <div id="login-case">
+                                <h3>Login to your account</h3>
+                                <p>If you're already a member, login to your Neighborhood account.</p>
+                                <form method="POST" action="#" class="validate">
+                                    <div class="form-group">
+                                        <label class="form-control-label">E-Mail</label>
+                                        <input type="email" class="form-control" data-fv-notempty="true">
+                                    </div><!-- .form-group -->
+                                    <div class="form-group">
+                                        <label class="form-control-label">Password</label>
+                                        <input type="password" class="form-control" data-fv-notempty="true">
+                                    </div><!-- .form-group -->
+                                    <div class="form-group">
+                                        <input type="submit" value="Login" class="btn btn-green" data-fv-notempty="true">
+                                    </div><!-- .form-group -->
+                                </form>
+                            </div><!-- .login-case -->
+
+                            <div id="register-case" style="display: none;">
+                                <h3>Create an account</h3>
+                                <p>Register on our great website to become a part of your Neighborhood.</p>
+                                <form method="POST" action="#">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Your Name</label>
+                                        <input type="text" class="form-control" placeholder="Please enter your full name" data-fv-notempty="true">
+                                    </div><!-- .form-group -->
+                                    <div class="form-group">
+                                        <label class="form-control-label">E-Mail</label>
+                                        <input type="email" class="form-control" placeholder="Please enter your e-mail address" data-fv-notempty="true">
+                                    </div><!-- .form-group -->
+                                    <div class="form-group">
+                                        <label class="form-control-label">Password</label>
+                                        <input type="password" class="form-control" data-fv-notempty="true">
+                                    </div><!-- .form-group -->
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            I agree to your awesome Terms of service
+                                        </label>
+                                    </div><!-- .form-check -->
+                                    <div class="form-group">
+                                        <input type="submit" value="Become a member" class="btn btn-green">
+                                    </div><!-- .form-group -->
+                                </form>
+                            </div><!-- .register-case -->
+                        </div><!-- .form-box -->
+                    </div><!-- .modal-body -->
+                </div><!-- .modal-content -->
+            </div><!-- .modal-dialog -->
+        </div><!-- .modal -->
+
+        <div style="display:none;">
+            <div id="popover-1">
+                <div class="data-title">More about Zara</div>
+                <div class="data-content"><strong>Lorem Ipsum</strong>
+                    is a simple dummy text of the printing and typesetting industry. <span style="color:red;">Lorem Ipsum</span>
+                    had been the industry's standard dummy <i>text ever</i> since the 1500s.
+                </div>
+            </div>
+        </div>
+        
+
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <!-- <script src="js/bootstrap.min.js"></script> -->
-    </body>
-</html>
+        <script src="js/bootstrap.min.js" ></script>
+        <script src="js/jquery.site.js"></script>
+        <script>
+            /*$('#test-modal').on('hidden.bs.modal', function (event) {
+                alert("Oh no you closed it.");
+            });*/
+        </script>
+    
+</body></html>

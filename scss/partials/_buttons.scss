@@ -1,0 +1,21 @@
+.btn-green {
+    background: $color-green;
+    color: #fff;
+    // @include border-radius(20px);
+
+    &:hover {
+        background: $color-green-bg;
+        color: #fff;
+    }
+}
+
+.btn-purple {
+    border: 1px solid $color-blue;
+    background: transparent;
+    color: $color-blue;
+
+    &:hover {
+        background: $color-blue;
+        color: #fff;
+    }
+}

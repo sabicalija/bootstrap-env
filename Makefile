@@ -1,30 +1,23 @@
+LAYOUT_SRC:=scss/layout.scss
+BOOTSTRAP_SRC:=scss/vendor/bootstrap/bootstrap.scss
+FONTAWESOME_SRC:=scss/vendor/fontawesome/font-awesome.scss
 
-SCSS_ROOT:=scss
-SCSS_FILE:=layout.scss
-SCSS_SOURCE:=${SCSS_ROOT}/${SCSS_FILE}
-
-SCSS_WATCH:= .sass.PID
-
-CSS_ROOT:=css
-CSS_FILE:=style.css
-CSS_TARGET:=${CSS_ROOT}/${CSS_FILE}
-
+LAYOUT_TARGET:=css/style.css
+BOOTSTRAP_TARGET:=css/bootstrap.min.css
+FONTAWESOME_TARGET:=css/font-awesome.min.css
 
 all:
 
-
 style:
-	sass ${SCSS_SOURCE} ${CSS_TARGET}
+	sass --unix-newlines ${LAYOUT_SRC} ${LAYOUT_TARGET}
+	sass --style compressed ${BOOTSTRAP_SRC} ${BOOTSTRAP_TARGET}
+	sass --style compressed ${FONTAWESOME_SRC} ${FONTAWESOME_TARGET}
 
-style-watch:
-	sass --watch ${SCSS_SOURCE}:${CSS_TARGET}
+watch:
+	sass --watch \
+        --unix-newlines ${LAYOUT_SRC}:${LAYOUT_TARGET} \
+        --style compressed ${BOOTSTRAP_SRC}:${BOOTSTRAP_TARGET} \
+        --style compressed ${FONTAWESOME_SRC}:${FONTAWESOME_TARGET}
 
-style-watch-start: ${SCSS_WATCH}
-
-.sass.PID:
-	sass --watch ${SCSS_SOURCE}:${CSS_TARGET} & echo $$! > $@
-
-style-watch-stop: ${SCSS_WATCH}
-	kill `cat $<` && rm $<
 
 clean:

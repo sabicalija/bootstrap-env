@@ -1,0 +1,24 @@
+
+= README
+
+== Needful links
+
+* link:https://getbootstrap.com/[Bootstrap]
+* link:https://getbootstrap.com/docs/4.0/getting-started/introduction/[Bootstrap 4 - Doku]
+* link:https://fontawesome.com/[FontAwesome]
+* link:https://fonts.google.com/[Google Fonts]
+
+* *Webdevelopment*
+** link:http://codeguide.co/[Code Guide by @mdo]
+** link:[]
+
+* *Performance*
+** link:https://getpocket.com/a/read/170629858[PageSpeed Insights Rules]
+** link:https://getpocket.com/a/read/2012996802[Front-End Performance]
+** link:https://getpocket.com/a/read/2012977400[Front-End Performance Checklist 2018]
+
+* *Compatibility*
+** link:https://caniuse.com/[Can i use?]
+
+* *Project Management*
+** link:https://help.github.com/articles/about-project-boards/[GitHub Project] (link:https://help.github.com/articles/creating-a-project-board/[HowTo])

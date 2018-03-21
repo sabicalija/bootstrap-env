@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=1">
+        <meta name="author" content="study@home">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link href="https://font.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Account</title>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-collapse-xs navbar-expand-md fixed-top">
+        
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fas fa-map-marker-alt"></i> Neighborhood</a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#main-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Browse
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Hospitals</a>
+                                <a class="dropdown-item" href="#">Finance</a>
+                                <a class="dropdown-item" href="#">Shopping</a>
+                                <a class="dropdown-item" href="#">Food</a>
+                                <a class="dropdown-item" href="#">Nightlife</a>
+                                <a class="dropdown-item" href="#">Hotels</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Submit your brand</a>
+                        </li>
+                    </ul>
+                </div><!-- .collapse -->
+            </div><!-- .container -->
+        </nav><!-- .navbar -->
+
+        <div class="home-hero">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="content-box">
+                            <h2>Explore your Neighborhood</h2>
+                            <form method="GET" action="#">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placesholder="What do you want to discover today?">
+                                    <input type="submit" class="btn btn-green" value="Search">                                    
+                                </div><!-- .form-group -->
+                            </form>
+                        </div><!-- .content-box -->
+                    </div><!-- .col-md-12 -->
+
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .home-hero -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <div class="form-box">
+                        <h3>Create an account</h3>
+                        <p>Register on our great website to become a part of your Neighborhood.</p>
+                        <form method="POST" action="#">
+                            <div class="form-group">
+                                <label class="form-control-label">Your Name</label>
+                                <input class="form-control" type="text" placeholder="Please enter your full name" data-fv-notempty="true">
+                            </div><!-- /.form-group -->
+
+                            <div class="form-group">
+                                <label class="form-control-label">E-mail</label>
+                                <input class="form-control" type="email" placeholder="Please enter yout e-mail address" data-fv-notempty="true">
+                            </div><!-- /.form-group -->
+
+                            <div class="form-group">
+                                <label class="form-control-label">Password</label>
+                                <input class="form-control" type="password" data-fv-notempty="true">
+                            </div><!-- /.form-group -->
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox">
+                                    I agree to your awesome Terms of service
+                                </label>
+                            </div><!-- /.form-check -->
+
+                            <div class="form-group">
+                                <input class="btn btn-green" type="submit" value="Become a member">
+                            </div><!-- /.form-group -->
+                        </form>
+                    </div><!-- /.form-box -->
+
+                </div><!-- /.col-md-6 -->
+
+                <div class="col-md-6">
+                    
+                    <div class="form-box">
+                        <h3>Login to your account</h3>
+                        <p>If you already have a member login to your Neighborhood account.</p>
+                        <form method="POST" action="#" class="validate">
+                            <div class="form-group">
+                                <label class="form-control-label">E-Mail</label>
+                                <input class="form-control" type="email" data-fv-notempty="true">
+                            </div><!-- /.form-group -->
+                            
+                            <div class="form-group">
+                                <label class="form-control-label">Password</label>
+                                <input class="form-control" type="password" data-fv-notempty="true">
+                            </div><!-- /.form-group -->
+
+                            <div class="form-group">
+                                <input class="btn btn-green" type="submit" value="Login">
+                            </div><!-- /.form-group -->
+                        </form>
+                    </div><!-- /.form-box -->
+
+                </div><!-- /.col-md-6 -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js" ></script>
+    </body>
+</html>
