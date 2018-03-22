@@ -13,9 +13,9 @@
 ** link:[]
 
 * *Performance*
-** link:https://getpocket.com/a/read/170629858[PageSpeed Insights Rules]
-** link:https://getpocket.com/a/read/2012996802[Front-End Performance]
-** link:https://getpocket.com/a/read/2012977400[Front-End Performance Checklist 2018]
+** link:https://developers.google.com/speed/docs/insights/rules[PageSpeed Insights Rules]
+** link:https://www.smashingmagazine.com/2018/01/front-end-performance-checklist-2018-pdf-pages/[Front-End Performance]
+** link:https://www.dropbox.com/s/8h9lo8ee65oo9y1/front-end-performance-checklist-2018.pdf?dl=0[Front-End Performance Checklist 2018]
 
 * *Compatibility*
 ** link:https://caniuse.com/[Can i use?]
